@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<div class="container">
+    <div class="toolbar">
+        <b>My service</b>
+    </div>
+    <div class="products-list mt-5">
+        <h2>Products</h2>
+        <hr>
+        <ul class="list-unstyled">
+            {{range .Products}}
+            <li class="mb-3">
+                <div>ID: <a href="/product?id={{.ID}}">{{.ID}}</a></div>
+                <div>Name: {{.Name}}</div>
+                <div>Price: {{.Price}}</div>
+                <div>Manufacturer: {{.Manufacturer}}</div>
+            </li>
+            {{end}}
+        </ul>
+    </div>
+</div>
